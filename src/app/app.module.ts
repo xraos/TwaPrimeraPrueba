@@ -8,10 +8,18 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatInputModule, MatListModule, MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
 
+// importar rutas
+import {routing, appRoutingProviders} from './app.routing';
+import { HomeComponent } from './components/home/home.component';
+import { ErrorComponent } from './components/error/error.component';
+import { ListadoComponent } from './components/listado/listado.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ErrorComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,
@@ -23,9 +31,10 @@ import {MatInputModule, MatListModule, MatButtonModule, MatCardModule, MatIconMo
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
