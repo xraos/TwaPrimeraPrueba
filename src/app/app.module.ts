@@ -7,11 +7,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatInputModule, MatListModule, MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import { FavoritoComponent } from './components/favorito/favorito.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FavoritoComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
