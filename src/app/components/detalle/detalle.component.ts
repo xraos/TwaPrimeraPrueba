@@ -25,7 +25,7 @@ export class DetalleComponent implements OnInit {
       const id = params['id'];
       this._objetosService.getObjeto(id).subscribe(
         response => {
-          this.objeto = response;
+          this.objeto = response.articles[id];
           console.log(this.objeto);
 // this._router.navigate(['/productos']);
         },

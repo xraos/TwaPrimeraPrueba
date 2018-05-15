@@ -11,7 +11,7 @@ import {ObjetosService} from '../../services/objeto.service';
 })
 export class ListadoComponent implements OnInit {
 
-  public objetos;
+  public objetos: Object[];
 
   constructor(
     private objetoService: ObjetosService,
@@ -21,7 +21,7 @@ export class ListadoComponent implements OnInit {
   ngOnInit() {
     this.objetoService.getObjetos().subscribe(
       result => {
-        this.objetos = result;
+        this.objetos = result.articles;
       }
     );
   }

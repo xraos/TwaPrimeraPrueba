@@ -3,7 +3,7 @@ import { OnInit } from '@angular/core';
 @Injectable()
 export class GlobalService implements OnInit {
   constructor() { }
-  private url = 'https://jsonplaceholder.typicode.com';
+  private url = 'https://newsapi.org/v2';
   ngOnInit() {
     console.log(this.url);
   }
