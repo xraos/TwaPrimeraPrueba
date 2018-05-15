@@ -4,22 +4,39 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {MatInputModule, MatListModule, MatButtonModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule, MatExpansionModule, MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule,
+  MatTabsModule,
+  MatToolbarModule
+} from '@angular/material';
 
 // importar rutas
 import {routing, appRoutingProviders} from './app.routing';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ListadoComponent } from './components/listado/listado.component';
+import { FavoritoComponent } from './components/favorito/favorito.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
+import {GlobalService} from './services/global.service';
+import {ObjetosService} from './services/objeto.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ErrorComponent,
-    ListadoComponent
+    ListadoComponent,
+    FavoritoComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
@@ -28,13 +45,22 @@ import { ListadoComponent } from './components/listado/listado.component';
     BrowserAnimationsModule,
     MatListModule,
     MatInputModule,
-    MatButtonModule,
     MatCardModule,
-    MatIconModule,
+    MatExpansionModule,
+    MatCheckboxModule,
+    MatMenuModule,
     MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatChipsModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    ReactiveFormsModule,
+    MatTabsModule,
+    MatGridListModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, GlobalService, ObjetosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
