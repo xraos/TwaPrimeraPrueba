@@ -13,11 +13,11 @@ export class ObjetosService {
   getObjetos() {
     console.log(this.url);
     console.log(this.url);
-    return this._http.get(this.url + '/photos');
+    return this._http.get(this.url + '/top-headlines?sources=google-news&apiKey=b4748897fc9f461495692c6e2237be12');
   }
   getObjeto(id) {
     console.log(id);
-    return this._http.get(this.url + '/photos/' + id);
+    return this._http.get(this.url + '/top-headlines?sources=google-news&apiKey=b4748897fc9f461495692c6e2237be12');
   }
 
 }

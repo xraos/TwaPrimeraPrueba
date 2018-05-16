@@ -5,6 +5,6 @@ export class Objeto {
     thumbnailUrl: string,
     title: string,
     url: string,
-
+    articles: Object[],
   ) {}
 }
