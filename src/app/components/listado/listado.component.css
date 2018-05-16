@@ -37,12 +37,8 @@ mat-card-subtitle{
   h1 {
     font-size: 12px;
   }
-}
-@media screen and (max-width: 400px) {
-  h1 {
-    font-size: 10px;
-  }
-  hi{
-    font-size: large;
+  mat-card {
+    max-height: 100%;
+    max-width:  100%;
   }
 }

@@ -20,3 +20,9 @@ p {
 }
 .author { color: #8d8d8d; font-family: Georgia, serif; font-style: italic; font-size: 14px; margin-bottom: 28px; }
 .author a { color: #c73036; font-family: "Helvetica Neue", sans-serif; font-weight: bold; text-decoration: none; text-transform: uppercase; }
+@media screen and (max-width: 700px) {
+  mat-card {
+    max-height: 100%;
+    max-width:  100%;
+  }
+}
