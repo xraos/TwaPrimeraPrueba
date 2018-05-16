@@ -1,8 +1,15 @@
-<h1 *ngIf="objeto">{{objeto.title}}</h1>
-<mat-card-header>
-  <img mat-card-mat-image src={{objeto.urlToimage}} alt="Foto de la noticia con id {{objeto.id}}">
-  <div>Hola</div>
-  <button mat-fab>
+<mat-card class="detalle-noticia">
+  <mat-card-header>
+    <mat-card-title *ngIf="objeto"><h1>{{objeto.title}}</h1></mat-card-title>
+</mat-card-header>
+  <mat-card-content>
+  <img mat-card-mat-image src={{objeto.urlToImage}} alt="Foto de la noticia">
+    <p>Description: {{objeto.description}}</p>
+    <p class="author">Autor: <a>{{objeto.author}}</a></p>
+  </mat-card-content>
+    <mat-card-actions>
+    <button mat-fab>
     <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
   </button>
-</mat-card-header>
+  </mat-card-actions>
+</mat-card>
