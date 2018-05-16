@@ -4,7 +4,7 @@
 <div *ngIf="!objetos">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
-<mat-grid-list cols="4" rowHeight="1:1" *ngIf="objetos">
+<mat-grid-list cols="1" rowHeight="1:1" *ngIf="objetos">
   <mat-grid-tile *ngFor="let objeto of objetos; let i = index">
     <mat-card *ngIf="i<24" class="example-card">
       <mat-card-header>
@@ -14,8 +14,8 @@
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{objeto.title}}</mat-card-title>
         <button mat-raised-button color="warn" [routerLink]="['/detalle-objeto', objeto.id]">Ver Objeto</button>
-        <mat-card-subtitle>ID: {{objeto.id}}</mat-card-subtitle>
-        {{objeto.url}}
+        <mat-card-subtitle>ID: {{objeto.id}}{{objeto.url}}</mat-card-subtitle>
+
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
