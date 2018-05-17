@@ -9,7 +9,8 @@ import {ObjetosService} from '../../services/objeto.service';
   styleUrls: ['./detalle-favorito.component.css'],
 })
 export class DetalleFavoritoComponent implements OnInit {
-  public objetoa: Objeto;
+  public objeto: Objeto;
+  public favoritos: Objeto[];
   constructor(
     private _objetosService: ObjetosService,
     private route: ActivatedRoute,
@@ -20,8 +21,16 @@ export class DetalleFavoritoComponent implements OnInit {
   ngOnInit() {
     // Recogemos los parametros de la URL
     this.route.params.subscribe(params => {
-      if (params['ob'] != null) {
-        this.objeto = +params['ob'];
+      const id = params['id'];
+      if (localStorage.getItem('favoritos') == null) {
+        this.favoritos = [];
+      } else {
+        this.favoritos = JSON.parse(localStorage.getItem('favoritos'));
+      }
+      this.objeto = this.favoritos[id]
+      console.log(this.objeto);
+      console.log(id);
+
       }
     });
   }

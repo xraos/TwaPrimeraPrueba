@@ -36,6 +36,7 @@ export class ObjetosService {
   /** Guarda un objeto en LocalStorage como favoritos*/
   guardarFavorito(favorito: Objeto) {
     this.favoritos.unshift(favorito);
+
     let favoritos  = [];
     if (localStorage.getItem('favoritos') == null) {
       favoritos = [];
