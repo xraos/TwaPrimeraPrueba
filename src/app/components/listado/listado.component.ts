@@ -10,7 +10,7 @@ import {ObjetosService} from '../../services/objeto.service';
 })
 export class ListadoComponent implements OnInit {
 
-  public objetos: Object[];
+  public objetos = [];
 
   constructor(
     private objetoService: ObjetosService,

@@ -46,4 +46,15 @@ export class ObjetosService {
       localStorage.setItem('favoritos', JSON.stringify(favoritos));
     }
   }
+
+  /** Borra un objeto de favoritos*/
+  borrarFavorito(favorito: Objeto) {
+    for (let i = 0; this.favoritos.length; i++) {
+      if (favorito == this.favoritos[i]) {
+        this.favoritos.splice(i, 1 ) ;
+        localStorage.setItem('favoritos', JSON.stringify(this.favoritos));
+        return this.favoritos;
+      }
+    }
+  }
 }

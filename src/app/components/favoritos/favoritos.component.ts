@@ -15,5 +15,8 @@ export class FavoritosComponent implements OnInit {
     this.favoritos = this.objetoService.getFavoritos();
     console.log(this.favoritos);
   }
+  borrarFavorito(objeto) {
+    this.objetoService.borrarFavorito(objeto);
+  }
 
 }

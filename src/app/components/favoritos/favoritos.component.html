@@ -10,6 +10,7 @@
           <mat-card-title><h1>{{objeto.title}}</h1></mat-card-title></p>
       </mat-card-header>
       <button mat-raised-button color="warn" [routerLink]="['/detalle-objeto', i]">Ver Noticia</button>
+      <button mat-raised-button color="accent" (click)="borrarFavorito(objeto)">Borrar Noticia</button>
       <mat-card-subtitle>ID: {{i}}  </mat-card-subtitle>
     </mat-card>
   </mat-grid-tile>
