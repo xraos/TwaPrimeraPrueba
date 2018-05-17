@@ -2,14 +2,14 @@
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
 <mat-grid-list cols="1" rowHeight="2:1" *ngIf="favoritos">
-  <mat-grid-tile *ngFor="let objeto of favoritos; let i = index">
+  <mat-grid-tile *ngFor="let objeto of favoritos; let i = index" >
     <mat-card *ngIf="i<24" class="example-card">
       <mat-card-header>
         <p><img mat-card-mat-image src={{objeto.urlToImage}} alt="Foto de la noticia">
           <!--<div mat-card-avatar class="example-header-image"></div>-->
           <mat-card-title><h1>{{objeto.title}}</h1></mat-card-title></p>
       </mat-card-header>
-      <button mat-raised-button color="warn" [routerLink]="['/detalle-objeto', i]">Ver Noticia</button>
+      <button mat-raised-button color="warn" (click)="redirigir(objeto, i)"[routerLink]="['/favoritos/detalle-objeto', i]">Ver Noticia</button>
       <button mat-raised-button color="accent" (click)="borrarFavorito(objeto)">Borrar Noticia</button>
       <mat-card-subtitle>ID: {{i}}  </mat-card-subtitle>
     </mat-card>

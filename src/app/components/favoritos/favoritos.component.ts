@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 import {ObjetosService} from '../../services/objeto.service';
+import {Objeto} from '../../models/objeto';
 
 @Component({
   selector: 'app-favoritos',
@@ -7,9 +9,9 @@ import {ObjetosService} from '../../services/objeto.service';
   styleUrls: ['./favoritos.component.css']
 })
 export class FavoritosComponent implements OnInit {
-
   public let; favoritos = [];
-  constructor(private objetoService: ObjetosService) { }
+  public objeto: Objeto;
+  constructor(private objetoService: ObjetosService, private router: Router) { }
 
   ngOnInit() {
     this.favoritos = this.objetoService.getFavoritos();
@@ -18,5 +20,7 @@ export class FavoritosComponent implements OnInit {
   borrarFavorito(objeto) {
     this.objetoService.borrarFavorito(objeto);
   }
-
+  redirigir(ob: Objeto, i: string) {
+    this.router.navigate(['/favoritos/detalle-objeto', i , ob]);
+  }
 }

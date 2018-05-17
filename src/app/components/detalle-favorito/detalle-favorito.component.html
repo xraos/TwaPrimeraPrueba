@@ -1,0 +1,13 @@
+<mat-card class="detalle-noticia">
+  <mat-card-header>
+    <mat-card-title *ngIf="objeto"><h1>{{objeto.title}}</h1></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-mat-image src={{objeto.urlToImage}} alt="Foto de la noticia">
+    <p>Description: {{objeto.description}}</p>
+    <p class="author">Autor: <a>{{objeto.author}}</a></p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="warn" [routerLink]="['/listado']">Volver</button>
+  </mat-card-actions>
+</mat-card>

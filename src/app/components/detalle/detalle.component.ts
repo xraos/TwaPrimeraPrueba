@@ -28,7 +28,6 @@ export class DetalleComponent implements OnInit {
         response => {
           this.objeto = response.articles[id];
           console.log(this.objeto);
-// this._router.navigate(['/productos']);
         },
         error => {
           console.log(<any>error);

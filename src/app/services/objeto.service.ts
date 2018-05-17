@@ -6,6 +6,7 @@ import { Objeto } from './../models/objeto';
 export class ObjetosService {
   public url: string;
   public favoritos: Objeto[];
+  public fav: Objeto;
   constructor(
     public _http: HttpClient,
     private _url: GlobalService,

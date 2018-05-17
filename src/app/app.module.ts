@@ -28,6 +28,7 @@ import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import {GlobalService} from './services/global.service';
 import {ObjetosService} from './services/objeto.service';
+import { DetalleFavoritoComponent } from './components/detalle-favorito/detalle-favorito.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {ObjetosService} from './services/objeto.service';
     ErrorComponent,
     ListadoComponent,
     FavoritosComponent,
-    DetalleComponent
+    DetalleComponent,
+    DetalleFavoritoComponent
   ],
   imports: [
     BrowserModule,
