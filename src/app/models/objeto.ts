@@ -5,6 +5,7 @@ export class Objeto {
     thumbnailUrl: string,
     title: string,
     url: string,
+    urlToImage: string,
     articles: Object[],
   ) {}
 }

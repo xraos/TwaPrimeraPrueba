@@ -10,6 +10,7 @@ import {Objeto} from '../../models/objeto';
 })
 export class DetalleComponent implements OnInit {
   public objeto: Objeto;
+  public  favoritos = [];
   constructor(
     private _objetosService: ObjetosService,
     private _route: ActivatedRoute,
@@ -34,5 +35,9 @@ export class DetalleComponent implements OnInit {
         }
       );
     });
+  }
+  /** Recibe un objeto y lo entrega al servicio para guardarlo en localStorage**/
+  agregarFavorito( objeto: Objeto) {
+    this._objetosService.guardarFavorito(objeto);
   }
 }

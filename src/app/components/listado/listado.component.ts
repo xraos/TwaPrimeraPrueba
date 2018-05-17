@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
-
-import { Objeto } from '../../models/objeto';
 import {ObjetosService} from '../../services/objeto.service';
+
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',
@@ -25,4 +24,5 @@ export class ListadoComponent implements OnInit {
       }
     );
   }
+
 }

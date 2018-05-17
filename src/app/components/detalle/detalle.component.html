@@ -9,7 +9,8 @@
   </mat-card-content>
     <mat-card-actions>
     <button mat-fab>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+    <mat-icon aria-label="Example icon-button with a heart icon" (click)="agregarFavorito(objeto)"></mat-icon>
   </button>
+      <button mat-raised-button color="warn" [routerLink]="['/listado']">Volver</button>
   </mat-card-actions>
 </mat-card>

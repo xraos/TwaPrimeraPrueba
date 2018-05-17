@@ -24,7 +24,7 @@ import {routing, appRoutingProviders} from './app.routing';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ListadoComponent } from './components/listado/listado.component';
-import { FavoritoComponent } from './components/favorito/favorito.component';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import {GlobalService} from './services/global.service';
 import {ObjetosService} from './services/objeto.service';
@@ -35,7 +35,7 @@ import {ObjetosService} from './services/objeto.service';
     HomeComponent,
     ErrorComponent,
     ListadoComponent,
-    FavoritoComponent,
+    FavoritosComponent,
     DetalleComponent
   ],
   imports: [
