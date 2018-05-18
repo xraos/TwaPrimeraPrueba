@@ -20,7 +20,4 @@ export class FavoritosComponent implements OnInit {
   borrarFavorito(objeto) {
     this.objetoService.borrarFavorito(objeto);
   }
-  redirigir(i: string) {
-    this.router.navigate(['/favoritos/detalle-objeto', i]);
-  }
 }

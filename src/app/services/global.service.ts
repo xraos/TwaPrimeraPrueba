@@ -11,3 +11,4 @@ export class GlobalService implements OnInit {
     return this.url;
   }
 }
+

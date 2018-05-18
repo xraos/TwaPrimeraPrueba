@@ -23,3 +23,8 @@ mat-toolbar-row {
   right: 20px;
   color: white;
 }
+@media screen and (max-width: 600px) {
+button{
+  margin-left: auto;
+}
+}

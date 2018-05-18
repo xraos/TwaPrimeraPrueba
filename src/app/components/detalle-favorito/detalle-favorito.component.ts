@@ -31,7 +31,7 @@ export class DetalleFavoritoComponent implements OnInit {
       console.log(this.objeto);
       console.log(id);
 
-      }
-    });
-  }
+    }
+  });
+}
 }

@@ -1,15 +1,12 @@
 <div>
   <mat-toolbar color="primary">
     <span><mat-icon>domain</mat-icon></span>
-
+    <div class="boton">
     <span>Prueba n°1 de TWA - {{title}}</span>
-
-    <button mat-raised-button color="warn" [routerLink]="['/']"> Inicio </button>
-    <button mat-raised-button [routerLink]="['listado']">Noticias </button>
+    <button mat-raised-button color="warn" [routerLink]="['listado']">Noticias </button>
     <button mat-raised-button color="accent" [routerLink]="['favoritos']">Favoritos </button>
-
+    </div>
   </mat-toolbar>
-
   <mat-card>
     <router-outlet></router-outlet>
   </mat-card>
